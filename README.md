@@ -29,18 +29,29 @@
 
 ## 🏗️ Skill 标准结构
 
-每个 Skill 遵循统一结构，确保可复用、可组合：
+每个 Skill 遵循统一结构，确保可复用、可组合、可验证：
 
 ```
 skill-name/
 ├── SKILL.md              # 主文档：触发条件、输入、步骤、输出
 ├── framework.md          # 核心框架/模型详解（带图示）
 ├── checklist.md          # 执行检查清单（打印可用）
+├── PROGRESS.md           # 进度追踪（长流程支持断点续传）
 ├── templates/            # 可直接填写的模板
 │   └── xxx-template.md
 └── examples/             # 真实案例与输出样例
     └── case-xxx.md
 ```
+
+### Skill 核心设计原则
+
+1. **双模式执行** —— Full Mode 完整流程 / Fast Track 快速验证
+2. **决策门控制** —— 关键节点 Go/No-Go 检查，避免方向错误
+3. **置信度透明** —— 所有结论标注 High/Medium/Low + [Data]/[Estimate]/[Assumption]/[Opinion]
+4. **反模式自检** —— 自动检测创始人常见错误模式
+5. **Kill Criteria** —— 明确的放弃/转型标准，避免沉没成本
+6. **断点续传** —— PROGRESS.md 记录进度，支持中断后恢复
+7. **诚实协议** —— 不做啦啦队，直接讲真话，给出明确建议
 
 ## 📖 沉淀方法论
 
